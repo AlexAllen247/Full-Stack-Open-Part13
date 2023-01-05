@@ -1,0 +1,28 @@
+{
+  "name": "full-stack-open-part13",
+  "version": "1.0.0",
+  "description": "These are my solutions to the exercises in part 13 of the Full Stack Open Course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexAllen247/Full-Stack-Open-Part13.git"
+  },
+  "author": "AlexAllen247",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexAllen247/Full-Stack-Open-Part13/issues"
+  },
+  "homepage": "https://github.com/AlexAllen247/Full-Stack-Open-Part13#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "pg": "^8.8.0",
+    "sequelize": "^6.28.0"
+  }
+}
