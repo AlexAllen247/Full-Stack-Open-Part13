@@ -50,15 +50,24 @@ router.post("/", async (req, res) => {
     }
     const user = await User.findByPk(req.decodedToken.id);
     console.log(user);
-    const blog = await Blog.create({
-      ...req.body,
-      userId: req.decodedToken.id,
-      likes: 0,
-      created_at: new Date(),
-      updated_at: new Date(),
-    });
-    console.log(blog);
-    res.json(blog);
+    const { title, author, url, year } = req.body;
+    if (year >= 1991 && year <= new Date().getFullYear()) {
+      const blog = await Blog.create({
+        title,
+        author,
+        url,
+        year,
+        userId: user.id,
+        created_at: new Date(),
+        updated_at: new Date(),
+      });
+      console.log(blog);
+      res.json(blog);
+    } else {
+      res.status(400).json({
+        error: "Year must be between 1991 and this year",
+      });
+    }
   } catch (error) {
     return res.status(400).json({ error });
   }

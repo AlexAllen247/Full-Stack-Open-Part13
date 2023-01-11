@@ -1,9 +1,10 @@
 POST http://localhost:3001/api/blogs
 content-type: application/json
-authorization: bearer 
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkV4YW1wbGVAZXhhbXBsZS5jb20iLCJpZCI6NCwiaWF0IjoxNjczMzQ0NjY3fQ.M9B-m1c55YF4jl81eE0fA2AlySndgWG4-viRyrBppbw
 
 {
   "author": "Author Example",
   "url": "http://test.com/",
-  "title": "Example Title"
+  "title": "Example Title",
+  "year": 1990
 }
