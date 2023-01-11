@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const { Blog, User } = require("../models");
-const { tokenExtractor } = require("../middleware/tokenExtractor");
 const { Op } = require("sequelize");
 
 const blogFinder = async (req, res, next) => {
@@ -55,6 +54,8 @@ router.post("/", async (req, res) => {
       ...req.body,
       userId: req.decodedToken.id,
       likes: 0,
+      created_at: new Date(),
+      updated_at: new Date(),
     });
     console.log(blog);
     res.json(blog);
