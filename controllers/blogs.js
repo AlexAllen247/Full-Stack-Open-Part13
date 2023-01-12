@@ -58,8 +58,8 @@ router.post("/", async (req, res) => {
         url,
         year,
         userId: user.id,
-        created_at: new Date(),
-        updated_at: new Date(),
+        createdAt: new Date(),
+        updatedAt: new Date(),
       });
       console.log(blog);
       res.json(blog);

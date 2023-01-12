@@ -25,11 +25,11 @@ Blog.init(
       type: DataTypes.INTEGER,
       defaultValue: 0,
     },
-    created_at: {
+    createdAt: {
       type: DataTypes.DATE,
       allowNull: false,
     },
-    updated_at: {
+    updatedAt: {
       type: DataTypes.DATE,
       allowNull: false,
     },
