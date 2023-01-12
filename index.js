@@ -21,7 +21,7 @@ app.use(errorHandler);
 app.use("/api/users", usersRouter);
 app.use("/api/login", loginRouter);
 app.use("/api/authors", authorsRouter);
-app.use("/api/readinglists", readingListsRouter);
+app.use("/api/readinglists", tokenExtractor, readingListsRouter);
 
 const start = async () => {
   await connectToDatabase();
